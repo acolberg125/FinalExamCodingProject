@@ -1,3 +1,5 @@
+LoanCalcView.xml
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
@@ -83,12 +85,12 @@
 						<TableView fx:id="tvResults" prefHeight="309.0" prefWidth="815.0">
 							<columns>
 								<TableColumn fx:id="colPaymentNumber" prefWidth="75.0" text="Payment #" />
-								<TableColumn prefWidth="114.0" text="Due Date" />
-								<TableColumn prefWidth="102.0" text="Payment" />
-								<TableColumn prefWidth="143.0" text="Additonal Payment" />
-								<TableColumn prefWidth="111.0" text="Interest" />
-								<TableColumn prefWidth="146.0" text="Principle" />
-								<TableColumn prefWidth="122.0" text="Balance" />
+								<TableColumn fx:id="colDDate" prefWidth="114.0" text="Due Date" />
+								<TableColumn fx:id="colPayment" prefWidth="102.0" text="Payment" />
+								<TableColumn fx:id="colAddPayment" prefWidth="143.0" text="Additional Payment" />
+								<TableColumn fx:id="colInt" prefWidth="111.0" text="Interest" />
+								<TableColumn fx:id="colPrinc" prefWidth="146.0" text="Principle" />
+								<TableColumn fx:id="colBal" prefWidth="122.0" text="Balance" />
 							</columns>
 						</TableView>
 					</children>

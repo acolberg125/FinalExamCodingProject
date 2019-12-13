@@ -44,14 +44,43 @@ public class LoanCalcViewController implements Initializable   {
 	@FXML
 	private TableColumn<Payment, Integer> colPaymentNumber;
 	
+	@FXML
+	private TableColumn<Payment, Integer> colDDate;
+	
+	@FXML
+	private TableColumn<Payment, Integer> colAddPayment;
+	
+	@FXML
+	private TableColumn<Payment, Integer> colPayment;
+	
+	@FXML
+	private TableColumn<Payment, Integer> colInt;
+	
+	@FXML
+	private TableColumn<Payment, Integer> colPrinc;
+	
+	@FXML
+	private TableColumn<Payment, Integer> colBal;
+	
 	
 	private ObservableList<Payment> paymentList = FXCollections.observableArrayList();
 	
-	//TODO: Account for all the other columns		
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		colPaymentNumber.setCellValueFactory(new PropertyValueFactory<>("paymentNbr"));
-		//TODO: Add a 'setCellValueFactor' entry for each column, mapping to each attribute in Payment
+		
+		colDDate.setCellValueFactory(new PropertyValueFactory<>("DueDate"));
+		
+		colAddPayment.setCellValueFactory(new PropertyValueFactory<>("AdditionalPay"));
+		
+		colPayment.setCellValueFactory(new PropertyValueFactory<>("Interest"));
+		
+		colInt.setCellValueFactory(new PropertyValueFactory<>("Interest"));
+		
+		colPrinc.setCellValueFactory(new PropertyValueFactory<>("Principle"));
+		
+		colBal.setCellValueFactory(new PropertyValueFactory<>("Balance"));
 		
 		tvResults.setItems(paymentList);
 	}
