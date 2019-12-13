@@ -45,7 +45,7 @@ public class LoanCalcViewController implements Initializable   {
 	private TableColumn<Payment, Integer> colPaymentNumber;
 	
 	@FXML
-	private TableColumn<Payment, Integer> colDDate;
+	private TableColumn<Payment, Integer> colDate;
 	
 	@FXML
 	private TableColumn<Payment, Integer> colAddPayment;
@@ -57,10 +57,10 @@ public class LoanCalcViewController implements Initializable   {
 	private TableColumn<Payment, Integer> colInt;
 	
 	@FXML
-	private TableColumn<Payment, Integer> colPrinc;
+	private TableColumn<Payment, Integer> colPrincle;
 	
 	@FXML
-	private TableColumn<Payment, Integer> colBal;
+	private TableColumn<Payment, Integer> colBalance;
 	
 	
 	private ObservableList<Payment> paymentList = FXCollections.observableArrayList();
@@ -70,7 +70,7 @@ public class LoanCalcViewController implements Initializable   {
 		
 		colPaymentNumber.setCellValueFactory(new PropertyValueFactory<>("paymentNbr"));
 		
-		colDDate.setCellValueFactory(new PropertyValueFactory<>("DueDate"));
+		colDate.setCellValueFactory(new PropertyValueFactory<>("DueDate"));
 		
 		colAddPayment.setCellValueFactory(new PropertyValueFactory<>("AdditionalPay"));
 		
@@ -78,9 +78,9 @@ public class LoanCalcViewController implements Initializable   {
 		
 		colInt.setCellValueFactory(new PropertyValueFactory<>("Interest"));
 		
-		colPrinc.setCellValueFactory(new PropertyValueFactory<>("Principle"));
+		colPrincle.setCellValueFactory(new PropertyValueFactory<>("Principle"));
 		
-		colBal.setCellValueFactory(new PropertyValueFactory<>("Balance"));
+		colBalance.setCellValueFactory(new PropertyValueFactory<>("Balance"));
 		
 		tvResults.setItems(paymentList);
 	}

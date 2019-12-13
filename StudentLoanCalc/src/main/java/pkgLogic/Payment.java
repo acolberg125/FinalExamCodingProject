@@ -27,9 +27,7 @@ public class Payment {
 		EndingBalance = beginningBalance - Principle; 
 		
 	}
-	
-	
-	
+
 	public int getPaymentNbr() {
 		return PaymentNbr;
 	}
